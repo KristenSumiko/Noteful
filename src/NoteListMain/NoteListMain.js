@@ -10,7 +10,7 @@ export default function NoteListMain(props) {
             <ul>
                 {props.notes.map(note =>
                     <li key={note.id}>
-                        <Not
+                        <Note
                             id={note.id}
                             name={note.name}
                             modified={note.modified}
@@ -18,7 +18,21 @@ export default function NoteListMain(props) {
                     </li>
                 )}
             </ul>
-            <div 
+            <div className='NoteListMain_button-container'>
+                <CircleButton
+                    tag={Link}
+                    to='/add-note'
+                    type='button'
+                    className='NoteListMain_add-note-button'
+                >
+                    <br />
+                    Note
+                </CircleButton>
+            </div>
         </section>
     )
+}
+
+NoteListMain.defaultProps = {
+    notes: [],
 }
