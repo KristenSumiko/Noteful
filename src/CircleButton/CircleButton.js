@@ -2,18 +2,18 @@ import React from 'react'
 import './CircleButton.css'
 
 export default function NavCircleButton(props) {
-    const {tag, className, childrenm, ...otherProps} = props
+    const {tag, className, children, ...otherProps} = props
 
     return React.cloneElement(
         props.tag,
         {
-            className: ['NavCircleButton', props.className].join(''),
+            className: ['NavCircleButton', props.className].join(' '),
             ...otherProps
         },
         props.children
     )
 }
 
-NavCircleButton.defaultProps = {
+NavCircleButton.defaultProps ={
     tag: 'a',
 }
