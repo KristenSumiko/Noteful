@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import Note from "../Note/Note";
+import Context from "../Context";
+import { getNotesForFolder } from "../notes-helpers";
 import "./NoteListMain.css";
 
 export default function NoteListMain(props) {
+  const context = useContext(Context);
+  const { folderId } = props.match.params;
+  const notesForFolder = getNotesForFolder(context.notes, folderId);
+
   return (
     <section className="NoteListMain">
       <ul>
-        {props.notes.map((note) => (
+        {notesForFolder.map((note) => (
           <li key={note.id}>
             <Note id={note.id} name={note.name} modified={note.modified} />
           </li>

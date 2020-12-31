@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Context from "../Context";
 import "./Note.css";
 
 export default function Note(props) {

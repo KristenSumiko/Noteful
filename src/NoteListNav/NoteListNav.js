@@ -1,23 +1,24 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink, Link } from "react-router-dom";
-
+import Context from "../Context";
 import { countNotesForFolder } from "../notes-helpers";
 import "./NoteListNav.css";
 
 export default function NoteListNav(props) {
+  const context = useContext(Context);
   return (
     <div className="NoteListNav">
       <ul className="NoteListNav_list">
-        {props.folders.map((folder) => (
+        {context.folders.map((folder) => (
           <li key={folder.id}>
             <NavLink
               className="NoteListNav_folder-link"
               to={`/folder/${folder.id}`}
             >
+              {folder.name} &mdash;&nbsp;
               <span className="NoteListNav_num-notes">
-                {countNotesForFolder(props.notes, folder.id)}
+                {countNotesForFolder(context.notes, folder.id)}
               </span>
-              {folder.name}
             </NavLink>
           </li>
         ))}

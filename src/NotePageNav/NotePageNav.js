@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
+import Context from "../Context";
 import "./NotePageNav.css";
+import { findNote, findFolder } from "../notes-helpers";
 
 export default function NotePageNav(props) {
+  const context = useContext(Context);
+  const { noteId } = props.match.params;
+  const note = findNote(context.notes, noteId) || {};
+  const folder = findFolder(context.folders, note.folderId);
+
   return (
     <div className="NotePageNav">
       <button
@@ -12,9 +19,7 @@ export default function NotePageNav(props) {
         Back
       </button>
 
-      {props.folder && (
-        <h3 className="NotePageNav_folder-name">{props.folder.name}</h3>
-      )}
+      {folder && <h3 className="NotePageNav_folder-name">{folder.name}</h3>}
     </div>
   );
 }
