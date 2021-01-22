@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 import "./NoteForm.css";
 
 export default function NotefulForm(props) {
@@ -10,4 +10,4 @@ export default function NotefulForm(props) {
       {...otherProp}
     />
   );
-}
+}*/

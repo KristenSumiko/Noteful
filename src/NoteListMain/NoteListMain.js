@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import Note from "../Note/Note";
 import Context from "../Context";
 import { getNotesForFolder } from "../notes-helpers";
-import "./NoteListMain.css";
 
 export default function NoteListMain(props) {
   const context = useContext(Context);
@@ -22,7 +21,7 @@ export default function NoteListMain(props) {
       <div className="NoteListMain_button-container">
         <Link
           to="/add-note"
-          className="NavCircleButton NoteListMain_add-note-button"
+          className="NavCircleButtom NoteListMain_add-note-button"
         >
           <br />
           Note
@@ -31,7 +30,3 @@ export default function NoteListMain(props) {
     </section>
   );
 }
-
-NoteListMain.defaultProps = {
-  notes: [],
-};

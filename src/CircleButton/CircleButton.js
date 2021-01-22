@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 import "./CircleButton.css";
 
 export default function NavCircleButton(props) {
@@ -16,4 +16,4 @@ export default function NavCircleButton(props) {
 
 NavCircleButton.defaultProps = {
   tag: "a",
-};
+};*/

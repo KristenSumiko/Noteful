@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { NavLink, Link } from "react-router-dom";
 import Context from "../Context";
 import { countNotesForFolder } from "../notes-helpers";
-import "./NoteListNav.css";
+//import AddFolder from "../AddFolder/AddFolder";
 
 export default function NoteListNav(props) {
   const context = useContext(Context);
@@ -35,7 +35,3 @@ export default function NoteListNav(props) {
     </div>
   );
 }
-
-NoteListNav.defaultProps = {
-  folders: [],
-};

@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import Context from "../Context";
-import "./NotePageNav.css";
 import { findNote, findFolder } from "../notes-helpers";
 
 export default function NotePageNav(props) {
