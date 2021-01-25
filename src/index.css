@@ -27,7 +27,14 @@ main {
 h1,
 h2 {
   font-family: "Courier New", Courier, monospace;
-  font-size: 20px;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 25px;
 }
 
 a {
@@ -47,6 +54,9 @@ div.Note {
   padding: 10px;
 }
 
+div.NotePageMain_content {
+  text-align: left;
+}
 div.NoteListMain_button-container,
 div.NoteListNav_button-wrapper {
   padding: 20px;
