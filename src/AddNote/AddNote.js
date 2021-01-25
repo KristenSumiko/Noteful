@@ -8,10 +8,10 @@ class AddNote extends Component {
     const newNote = {
       name: e.target.newNoteName.value,
       content: e.target.newNoteContent.value,
+      folderId: e.target.folderId.value,
       modified: new Date(),
     };
     this.context.addNote(newNote, () => {
-      //e.target vs this.??
       this.props.history.push("/");
     });
   };
@@ -33,6 +33,13 @@ class AddNote extends Component {
           aria-label="Write New Note Here"
           required
         />
+        <select name="folderId" required>
+          {this.context.folders.map((folder) => (
+            <option key={folder.id} value={folder.id}>
+              {folder.name}
+            </option>
+          ))}
+        </select>
         <input type="submit" />
       </form>
     );

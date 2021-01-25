@@ -116,17 +116,18 @@ class App extends Component {
   render() {
     return (
       <Context.Provider value={this.state}>
-        <div className="App">
-          <nav className="App_nav">{this.renderNavRoutes()}</nav>
-          <header className="App_header">
-            <h1>
-              <Link to="/">Noteful</Link>
-            </h1>
-          </header>
-          <Error>
+        <Error>
+          <div className="App">
+            <nav className="App_nav">{this.renderNavRoutes()}</nav>
+            <header className="App_header">
+              <h1>
+                <Link to="/">Noteful</Link>
+              </h1>
+            </header>
+
             <main className="App_main">{this.renderMainRoutes()}</main>
-          </Error>
-        </div>
+          </div>
+        </Error>
       </Context.Provider>
     );
   }

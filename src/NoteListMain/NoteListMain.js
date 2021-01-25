@@ -21,10 +21,10 @@ export default function NoteListMain(props) {
       <div className="NoteListMain_button-container">
         <Link
           to="/add-note"
-          className="NavCircleButtom NoteListMain_add-note-button"
+          className="NavCircleButton NoteListMain_add-note-button"
         >
           <br />
-          Note
+          Add New Note
         </Link>
       </div>
     </section>

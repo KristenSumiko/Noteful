@@ -39,7 +39,13 @@ export default function Note(props) {
 }
 
 Note.propTypes = {
-  id: PropTypes.string,
-  modified: PropTypes.string,
+  id: PropTypes.string.isRequired,
+  modified: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
+};
+
+Note.defaultProps = {
+  id: 0,
+  modified: "2020-01-01",
+  name: "Loading Note...",
 };

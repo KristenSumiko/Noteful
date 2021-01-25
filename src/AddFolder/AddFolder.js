@@ -19,6 +19,7 @@ class AddFolder extends Component {
           name="newFolderName"
           placeholder="New Folder Name"
           aria-label="New Folder Name"
+          required
         />
         <input type="submit" />
       </form>

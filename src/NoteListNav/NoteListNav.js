@@ -29,7 +29,7 @@ export default function NoteListNav(props) {
           className="NavCircleButton NoteListNav_add-folder-button"
         >
           <br />
-          Folder
+          Add New Folder
         </Link>
       </div>
     </div>
